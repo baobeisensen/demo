@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 80
+  #ssl:
+    #  key-store: C:/Program Files/Java/jdk1.8.0_201/bin/tomcat.keystore
+    #  key-alias: tomcat
+    #  enabled: true
+    #  key-store-password: 123456
+  #  key-store-type: JKS
