@@ -4,7 +4,6 @@ import org.apache.shiro.SecurityUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/back")
@@ -25,13 +24,13 @@ public class LoginController {
      * @Description 攔截所有請求到登陸界面
      * @return
      */
-    @GetMapping("/login")
+    @RequestMapping("/login")
     public String login(){
-        System.out.println("login");
+        //model.addAttribute("error" , "账号或密码错误");
         return "/back/login";
     }
 
-    @RequestMapping("main")
+    @RequestMapping("/main")
     public String page(){
         return "/back/main";
     }

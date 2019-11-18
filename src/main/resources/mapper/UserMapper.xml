@@ -6,7 +6,7 @@
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
-        <result property="pwd" column="pwd" jdbcType="VARCHAR"/>
+        <result property="pwd" column="PASSWORD" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--查询单个-->
@@ -37,7 +37,7 @@
     <select id="queryByUserNameAndPwd" resultType="com.example.demo.Entity.User">
         SELECT * FROM user
         WHERE name=#{userName}
-        AND pwd=#{pwd}
+        AND PASSWORD=#{pwd}
     </select>
 
     <!--新增所有列-->
