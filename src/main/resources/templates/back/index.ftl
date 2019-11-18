@@ -70,7 +70,7 @@
 						锁屏</a>
 					</li>
 					<li class="layui-nav-item">
-						<a href="/logout">
+						<a href="/admin/logout">
                         <i class="iconfont icon-exit"></i>
 						退出</a>
 					</li>

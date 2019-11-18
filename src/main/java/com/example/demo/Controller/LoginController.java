@@ -30,23 +30,19 @@ public class LoginController {
         System.out.println("login");
         return "/back/login";
     }
-    @PostMapping("/login")
-    public String loginIn(){
-        System.out.println("登陆成功");
-        return "/back/index";
-    }
+
     @RequestMapping("main")
     public String page(){
-        return "back/main";
+        return "/back/main";
     }
 
     @RequestMapping("/404")
     public String Err(){
-        return "back/404";
+        return "/back/404";
     }
     @RequestMapping("/personInfo")
     public String personInfo(){
-        return "back/personInfo";
+        return "/back/personInfo";
     }
 
 }

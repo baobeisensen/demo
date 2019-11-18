@@ -2,6 +2,7 @@ package com.example.demo.Shiro;
 
 import com.example.demo.Dao.UserDao;
 import com.example.demo.Entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -9,7 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import javax.annotation.Resource;
-
+@Slf4j
 public class ShiroRealm extends AuthorizingRealm {
     @Resource
     private UserDao userDao;
@@ -21,6 +22,7 @@ public class ShiroRealm extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+        log.info("调用权限验证");
         return null;
     }
 

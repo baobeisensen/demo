@@ -35,4 +35,15 @@ public class AdminController {
         return null;
     }
 
+    /**
+     * 退出
+     * @return
+     */
+    @RequestMapping("/logout")
+    public String logout(){
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return "login";
+    }
+
 }
