@@ -6,7 +6,7 @@
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
-        <result property="pwd" column="PASSWORD" jdbcType="VARCHAR"/>
+        <result property="pwd" column="pwd" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--查询单个-->
