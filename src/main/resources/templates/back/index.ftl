@@ -46,6 +46,9 @@
             </div>
             <!-- 右侧导航 -->
             <ul class="layui-nav larry-header-item">
+				<li class="layui-nav-item">
+					<img src="${user.head_img}" style="width: 13%;margin-left: 77%"/>
+				</li>
             		<li class="layui-nav-item">
             			${user.real_name}
             		</li>
@@ -104,7 +107,7 @@
                         </a>
                     </dd>
                     <dd>
-                        <a href="javascript:;" data-url="changepwd.html">
+                        <a href="javascript:;" data-url="/back/changepwd">
                             <i class="iconfont icon-iconfuzhi01" data-icon='icon-iconfuzhi01'></i>
                             <span>修改密码</span>
                         </a>

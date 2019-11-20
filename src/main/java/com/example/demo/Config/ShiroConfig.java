@@ -34,7 +34,7 @@ public class ShiroConfig{
         // 登录成功后要跳转的链接
         //shiroFilterFactoryBean.setSuccessUrl("/back/index");
         //未授权界面;
-        //shiroFilterFactoryBean.setUnauthorizedUrl("/back/404");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/back/404");
 
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         //注意过滤器配置顺序 不能颠倒
@@ -54,11 +54,12 @@ public class ShiroConfig{
         filterChainDefinitionMap.put("/test/**", "anon");
         filterChainDefinitionMap.put("/checkcenter/**", "anon");
         filterChainDefinitionMap.put("/websocket/**", "anon");
-        filterChainDefinitionMap.put("/socketTest.html", "anon");
         filterChainDefinitionMap.put("/index", "anon");
         filterChainDefinitionMap.put("/about", "anon");
         filterChainDefinitionMap.put("/job", "anon");
         filterChainDefinitionMap.put("/product", "anon");
+
+        filterChainDefinitionMap.put("/back/changepwd","perms[user:add]");
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了，登出后跳转配置的loginUrl
         filterChainDefinitionMap.put("/back/logout", "logout");
 

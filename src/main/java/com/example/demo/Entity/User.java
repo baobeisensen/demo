@@ -22,4 +22,12 @@ public class User implements Serializable {
     private Integer age;
 
     private String pwd;
+
+    private String phone;
+
+    private int sex;
+
+    private String head_img;
+
+    private String remarks;
 }

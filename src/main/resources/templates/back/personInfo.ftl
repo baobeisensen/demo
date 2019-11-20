@@ -38,20 +38,42 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">真实姓名</label>
 					<div class="layui-input-block">
-						<input type="text" name="username"  autocomplete="off" class="layui-input" value="Larry">
+						<input type="text" name="username"  autocomplete="off" class="layui-input" value=${user.real_name}>
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">手机号码</label>
 					<div class="layui-input-block">
-						<input type="text" name="username"  autocomplete="off" class="layui-input" placeholder="输入手机号码">
+						<input type="text" name="username"  autocomplete="off" class="layui-input" placeholder="输入手机号码" value=${user.phone}>
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">性别</label>
 					<div class="layui-input-block">
-						<input type="radio" name="sex" value="男" title="男" checked=""><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><span>男</span></div>
-						<input type="radio" name="sex" value="女" title="女"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>女</span></div>
+						<#if (user.sex == 1)>
+						<input type="radio" name="sex" value="男" title="男" checked="">
+							<div class="layui-unselect layui-form-radio layui-form-radioed">
+								<i class="layui-anim layui-icon"></i>
+								<span>男</span>
+							</div>
+						<input type="radio" name="sex" value="女" title="女">
+							<div class="layui-unselect layui-form-radio" checked>
+								<i class="layui-anim layui-icon"></i>
+								<span>女</span>
+							</div>
+						</#if>
+						<#if (user.sex == 0)>
+							<input type="radio" name="sex" value="男" title="男" >
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon"></i>
+								<span>男</span>
+							</div>
+							<input type="radio" name="sex" value="女" title="女" checked="">
+							<div class="layui-unselect layui-form-radio" >
+								<i class="layui-anim layui-icon"></i>
+								<span>女</span>
+							</div>
+						</#if>
 					</div>
 				</div>
 				<div class="layui-form-item">
@@ -74,7 +96,7 @@
 				<div class="layui-form-item layui-form-text">
 					<label class="layui-form-label">座右铭</label>
 					<div class="layui-input-block">
-						<textarea placeholder="既然选择了远方，便只顾风雨兼程；路漫漫其修远兮，吾将上下而求索" value="" class="layui-textarea"></textarea>
+						<textarea placeholder="既然选择了远方，便只顾风雨兼程；路漫漫其修远兮，吾将上下而求索" value="" class="layui-textarea">${user.remarks}</textarea>
 					</div>
 				</div>
 				

@@ -50,19 +50,32 @@ public class LoginController {
         return "/back/main";
     }
 
+    /**
+     * 无权限
+     * @return
+     */
     @RequestMapping("/404")
     public String Err(){
         return "/back/404";
     }
 
     /**
+     * 修改密码
+     * @return
+     */
+    @RequestMapping("/changepwd")
+    public String changepwd(){
+        return "/back/changepwd";
+    }
+
+
+    /**
      * 个人信息
-     * @param request
      * @param model
      * @return
      */
     @RequestMapping("/personInfo")
-    public String personInfo(HttpServletRequest request,Model model){
+    public String personInfo(Model model){
         User user = (User) SecurityUtils.getSubject().getPrincipal();
         model.addAttribute("user",user);
         return "/back/personInfo";

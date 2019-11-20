@@ -8,6 +8,10 @@
         <result property="real_name" column="real_name" jdbcType="VARCHAR"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
         <result property="pwd" column="pwd" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="INTEGER"/>
+        <result property="head_img" column="head_img" jdbcType="VARCHAR"/>
+        <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--查询单个-->
@@ -36,7 +40,7 @@
         </where>
     </select>
     <select id="queryByUserNameAndPwd" resultMap="UserMap">
-        SELECT id, name, age, pwd, real_name FROM user
+        SELECT id, name, age, pwd, real_name, phone, sex, head_img, remarks FROM user
         WHERE name=#{userName}
         AND pwd=#{pwd}
     </select>
