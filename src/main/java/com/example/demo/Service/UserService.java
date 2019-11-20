@@ -38,14 +38,6 @@ public interface UserService {
     User insert(User user);
 
     /**
-     * 修改数据
-     *
-     * @param user 实例对象
-     * @return 实例对象
-     */
-    User update(User user);
-
-    /**
      * 通过主键删除数据
      *
      * @param  主键
@@ -53,4 +45,5 @@ public interface UserService {
      */
     boolean deleteById( );
 
+    User query(String name, String pwd);
 }

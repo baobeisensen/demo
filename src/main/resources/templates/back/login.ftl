@@ -22,7 +22,7 @@
 		 <em>Management System</em>
 	</h1>
 	<font color="red">${error!}</font>
-	<form action="/admin/login" class="layui-form" method="POST" >
+	<form action="/back/login" class="layui-form" method="POST" >
 		<div class="layui-user-icon larry-login">
 			 <input type="text" placeholder="账号" class="login_txtbx" name="username"/>
 		</div>

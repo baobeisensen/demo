@@ -47,18 +47,6 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     * 修改数据
-     *
-     * @param user 实例对象
-     * @return 实例对象
-     */
-    @Override
-    public User update(User user) {
-        this.userDao.update(user);
-        return this.queryById(user.getId());
-    }
-
-    /**
      * 通过主键删除数据
      *
      * @param  主键
@@ -67,5 +55,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean deleteById( ) {
         return this.userDao.deleteById() > 0;
+    }
+
+    @Override
+    public User query(String name, String pwd) {
+        return userDao.queryByUserNameAndPwd(name,pwd);
     }
 }

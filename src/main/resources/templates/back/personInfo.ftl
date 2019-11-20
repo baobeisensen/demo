@@ -26,7 +26,7 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">用户名</label>
 					<div class="layui-input-block">  
-						<input type="text" name="title"  autocomplete="off"  class="layui-input layui-disabled" value="admin" disabled="disabled" >
+						<input type="text" name="title"  autocomplete="off"  class="layui-input layui-disabled" value=${user.name} disabled="disabled" >
 					</div>
 				</div>
 				<div class="layui-form-item">

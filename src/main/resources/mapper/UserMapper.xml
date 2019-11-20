@@ -5,14 +5,15 @@
     <resultMap type="com.example.demo.Entity.User" id="UserMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="real_name" column="real_name" jdbcType="VARCHAR"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
-        <result property="pwd" column="PASSWORD" jdbcType="VARCHAR"/>
+        <result property="pwd" column="pwd" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="UserMap">
         select
-          id, name, age
+          id, name, age, real_name
         from test.user
         where  id= #{id}
     </select>
@@ -34,10 +35,10 @@
             </if>
         </where>
     </select>
-    <select id="queryByUserNameAndPwd" resultType="com.example.demo.Entity.User">
-        SELECT * FROM user
+    <select id="queryByUserNameAndPwd" resultMap="UserMap">
+        SELECT id, name, age, pwd, real_name FROM user
         WHERE name=#{userName}
-        AND PASSWORD=#{pwd}
+        AND pwd=#{pwd}
     </select>
 
     <!--新增所有列-->
@@ -45,23 +46,6 @@
         insert into test.user(name, age)
         values (#{user.name}, #{user.age})
     </insert>
-
-    <!--通过主键修改数据-->
-    <update id="update">
-        update test.user
-        <set>
-            <if test="id != null">
-                id = #{id},
-            </if>
-            <if test="name != null and name != ''">
-                name = #{name},
-            </if>
-            <if test="age != null">
-                age = #{age},
-            </if>
-        </set>
-        where  = #{}
-    </update>
 
     <!--通过主键删除-->
     <delete id="deleteById">

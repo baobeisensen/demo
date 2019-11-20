@@ -47,7 +47,7 @@
             <!-- 右侧导航 -->
             <ul class="layui-nav larry-header-item">
             		<li class="layui-nav-item">
-            			${user.name}
+            			${user.real_name}
             		</li>
             		<#--<li class="layui-nav-item first">
 						<a href="javascript:;">			
@@ -70,7 +70,7 @@
 						锁屏</a>
 					</li>
 					<li class="layui-nav-item">
-						<a href="/admin/logout">
+						<a href="/back/logout">
                         <i class="iconfont icon-exit"></i>
 						退出</a>
 					</li>

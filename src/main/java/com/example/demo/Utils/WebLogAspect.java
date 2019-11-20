@@ -14,7 +14,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
-@Component
+/*@Component
 @Aspect
 public class WebLogAspect {
     private static final Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
@@ -25,11 +25,11 @@ public class WebLogAspect {
     }
 
 
-/**
+*//**
      * 前置通知攔截請求
      * @param joinPoint
      * @throws Throwable
-     */
+     *//*
 
     @Before("webLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable{
@@ -49,5 +49,5 @@ public class WebLogAspect {
     public void doAfterReturning(Object ret) throws Throwable {
         logger.info("RESPONSE : "+ ret);
     }
-}
+}*/
 

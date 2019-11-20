@@ -43,14 +43,6 @@ public interface UserDao {
     int insert(@Param("user") User user);
 
     /**
-     * 修改数据
-     *
-     * @param user 实例对象
-     * @return 影响行数
-     */
-    int update(User user);
-
-    /**
      * 通过主键删除数据
      *
      * @return 影响行数

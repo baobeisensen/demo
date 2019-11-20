@@ -1,7 +1,6 @@
 package com.example.demo.Entity;
 
 import lombok.Data;
-
 import java.io.Serializable;
 
 /**
@@ -17,6 +16,8 @@ public class User implements Serializable {
     private Integer id;
     
     private String name;
+
+    private String real_name;
     
     private Integer age;
 

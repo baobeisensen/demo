@@ -30,11 +30,11 @@ public class ShiroConfig{
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //配置shiro默认登录界面地址，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据
-        shiroFilterFactoryBean.setLoginUrl("/back/login");
+       shiroFilterFactoryBean.setLoginUrl("/back/login");
         // 登录成功后要跳转的链接
-        shiroFilterFactoryBean.setSuccessUrl("/back/index");
+        //shiroFilterFactoryBean.setSuccessUrl("/back/index");
         //未授权界面;
-        shiroFilterFactoryBean.setUnauthorizedUrl("/back/404");
+        //shiroFilterFactoryBean.setUnauthorizedUrl("/back/404");
 
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         //注意过滤器配置顺序 不能颠倒
@@ -60,7 +60,7 @@ public class ShiroConfig{
         filterChainDefinitionMap.put("/job", "anon");
         filterChainDefinitionMap.put("/product", "anon");
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了，登出后跳转配置的loginUrl
-        filterChainDefinitionMap.put("/logout", "logout");
+        filterChainDefinitionMap.put("/back/logout", "logout");
 
 
        // filterChainDefinitionMap.put("/", "anon");

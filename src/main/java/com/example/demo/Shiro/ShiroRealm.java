@@ -37,11 +37,8 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String userName =(String) authenticationToken.getPrincipal();
         String password =new String((char[]) authenticationToken.getCredentials());
-        String savedRequest =  SecurityUtils.getSubject().getSession().getHost();
-        System.out.println("用户"+userName+"认证ShiroRealm");
-        System.out.println("用户IP地址"+savedRequest+"-----------------------");
+        //String savedRequest =  SecurityUtils.getSubject().getSession().getHost();
         User user = userDao.queryByUserNameAndPwd(userName,password);
-
         if (user==null){
             throw new UnknownAccountException("用户名或密码错误！");
         }
