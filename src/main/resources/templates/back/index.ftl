@@ -46,8 +46,8 @@
             </div>
             <!-- 右侧导航 -->
             <ul class="layui-nav larry-header-item">
-				<li class="layui-nav-item">
-					<img src="${user.head_img}" style="width: 13%;margin-left: 77%"/>
+				<li class="layui-nav-item"  >
+					<img src="${user.head_img}" style="width: 34px;height: 34px;margin-left: -30%"/>
 				</li>
             		<li class="layui-nav-item">
             			${user.real_name}
