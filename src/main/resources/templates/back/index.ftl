@@ -118,8 +118,49 @@
                             <span>日志信息</span>
                         </a>
                     </dd>
+					<dd>
+						<a href="javascript:;" data-url="/back/admin/role">
+							<i class="iconfont icon-piliangicon" data-icon='icon-piliangicon'></i>
+							<span>角色管理</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="javascript:;" data-url="myloginfo.html">
+							<i class="iconfont icon-piliangicon" data-icon='icon-piliangicon'></i>
+							<span>权限分类</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="javascript:;" data-url="myloginfo.html">
+							<i class="iconfont icon-piliangicon" data-icon='icon-piliangicon'></i>
+							<span>权限管理</span>
+						</a>
+					</dd>
                 </dl>
 			</li>
+			<#--会员管理-->
+			<li class="layui-nav-item">
+				<a href="javascript:;">
+					<i class="iconfont icon-jiaoseguanli" ></i>
+					<span>会员管理</span>
+					<em class="layui-nav-more"></em>
+				</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;" data-url="/back/personInfo">
+							<i class="iconfont icon-geren1" data-icon='icon-geren1'></i>
+							<span>会员列表</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="javascript:;" data-url="/back/changepwd">
+							<i class="iconfont icon-iconfuzhi01" data-icon='icon-iconfuzhi01'></i>
+							<span>会员删除</span>
+						</a>
+					</dd>
+				</dl>
+			</li>
+
 			<!-- 用户管理 -->
 			<li class="layui-nav-item">
 					<a href="javascript:;">

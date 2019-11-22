@@ -32,7 +32,7 @@ public class ShiroConfig{
         //配置shiro默认登录界面地址，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据
        shiroFilterFactoryBean.setLoginUrl("/back/login");
         // 登录成功后要跳转的链接
-        //shiroFilterFactoryBean.setSuccessUrl("/back/index");
+        shiroFilterFactoryBean.setSuccessUrl("/back/index");
         //未授权界面;
         shiroFilterFactoryBean.setUnauthorizedUrl("/back/404");
 
